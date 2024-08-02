@@ -1,0 +1,4 @@
+.venv
+.capstone-env
+env
+alembic

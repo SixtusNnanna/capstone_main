@@ -1,0 +1,225 @@
+2024-07-20 05:22:19,167 - log - INFO - Founder username in the database
+2024-07-20 05:22:19,168 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/thirdsemester/venv/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-07-20 05:22:19,450 - log - INFO - User Authentication successful
+2024-07-20 05:22:19,450 - log - INFO - creating access token
+2024-07-20 05:22:19,458 - log - INFO - username has successfully logged in
+2024-07-20 05:24:01,308 - log - INFO - Founder username in the database
+2024-07-20 05:24:01,582 - log - ERROR - Invalid username or failed password verification
+2024-07-20 05:24:01,582 - log - ERROR - Could not Authenticate User
+2024-07-20 05:25:00,901 - log - INFO - Founder username in the database
+2024-07-20 05:25:00,902 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/thirdsemester/venv/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-07-20 05:25:01,182 - log - ERROR - Invalid username or failed password verification
+2024-07-20 05:26:54,210 - log - INFO - Founder username in the database
+2024-07-20 05:28:03,888 - log - INFO - Founder username in the database
+2024-07-20 05:28:03,888 - log - ERROR - User has already sign up
+2024-07-20 05:31:52,324 - log - ERROR - User has already sign up
+2024-07-20 05:31:55,095 - log - ERROR - User has already sign up
+2024-07-20 06:05:28,729 - log - INFO - Database session created
+2024-07-20 06:05:28,730 - log - INFO - Attempting to create a new user with username: username
+2024-07-20 06:05:28,760 - log - WARNING - User creation failed. User with username: username already exists.
+2024-07-20 06:05:28,761 - log - INFO - Database session closed
+2024-07-20 06:06:01,045 - log - INFO - Database session created
+2024-07-20 06:06:01,047 - log - INFO - Attempting to create a new user with username: username4
+2024-07-20 06:06:01,048 - log - WARNING - User not found: username4
+2024-07-20 06:06:01,049 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/thirdsemester/venv/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-07-20 06:06:01,348 - log - INFO - User created: username4
+2024-07-20 06:06:01,354 - log - INFO - Access token created for user: username4
+2024-07-20 06:06:01,354 - log - INFO - User created successfully with username: username4
+2024-07-20 06:06:01,355 - log - INFO - Database session closed
+2024-07-20 06:06:50,795 - log - INFO - Database session created
+2024-07-20 06:06:50,795 - log - INFO - Attempting to login user with username: username4
+2024-07-20 06:06:51,063 - log - WARNING - Failed authentication attempt for user: username4
+2024-07-20 06:06:51,063 - log - WARNING - Login failed for user with username: username4. Invalid credentials.
+2024-07-20 06:06:51,064 - log - INFO - Database session closed
+2024-07-20 06:07:22,467 - log - INFO - Database session created
+2024-07-20 06:07:22,467 - log - INFO - Attempting to login user with username: username4
+2024-07-20 06:07:22,738 - log - INFO - User authenticated: username4
+2024-07-20 06:07:22,738 - log - INFO - Access token created for user: username4
+2024-07-20 06:07:22,738 - log - INFO - User logged in successfully with username: username4
+2024-07-20 06:07:22,739 - log - INFO - Database session closed
+2024-07-20 06:07:35,512 - log - INFO - Database session created
+2024-07-20 06:07:35,513 - log - INFO - Database session closed
+2024-07-20 06:07:42,621 - log - INFO - Database session created
+2024-07-20 06:07:42,622 - log - INFO - Attempting to login user with username: username4
+2024-07-20 06:07:42,893 - log - INFO - User authenticated: username4
+2024-07-20 06:07:42,893 - log - INFO - Access token created for user: username4
+2024-07-20 06:07:42,893 - log - INFO - User logged in successfully with username: username4
+2024-07-20 06:07:42,894 - log - INFO - Database session closed
+2024-07-20 06:09:05,796 - log - INFO - Database session created
+2024-07-20 06:09:05,800 - log - INFO - User validated from token: username4
+2024-07-20 06:09:05,800 - log - INFO - Creating a new movie with title: Geek Girl by user ID: 6
+2024-07-20 06:09:05,815 - log - INFO - Created movie: Geek Girl, user_id=6
+2024-07-20 06:09:05,815 - log - INFO - Movie created successfully with title: Geek Girl
+2024-07-20 06:09:05,816 - log - INFO - Database session closed
+2024-07-20 06:10:30,396 - log - INFO - Database session created
+2024-07-20 06:10:30,399 - log - INFO - User validated from token: username4
+2024-07-20 06:10:30,400 - log - INFO - Creating a new movie with title: Geek Girl2 by user ID: 6
+2024-07-20 06:10:30,405 - log - INFO - Created movie: Geek Girl2, user_id=6
+2024-07-20 06:10:30,405 - log - INFO - Movie created successfully with title: Geek Girl2
+2024-07-20 06:10:30,405 - log - INFO - Database session closed
+2024-07-20 06:10:37,521 - log - INFO - Database session created
+2024-07-20 06:10:37,536 - log - INFO - User validated from token: username4
+2024-07-20 06:10:37,536 - log - INFO - Creating a new movie with title: Geek Girl 3 by user ID: 6
+2024-07-20 06:10:37,540 - log - INFO - Created movie: Geek Girl 3, user_id=6
+2024-07-20 06:10:37,541 - log - INFO - Movie created successfully with title: Geek Girl 3
+2024-07-20 06:10:37,541 - log - INFO - Database session closed
+2024-07-20 06:10:55,280 - log - INFO - Database session created
+2024-07-20 06:10:55,281 - log - INFO - Fetching list of movies with skip: 0 and limit: 10
+2024-07-20 06:10:55,319 - log - INFO - Database session closed
+2024-07-20 06:11:42,049 - log - INFO - Database session created
+2024-07-20 06:11:42,049 - log - INFO - Fetching list of movies with skip: 0 and limit: 10
+2024-07-20 06:11:42,089 - log - INFO - Database session closed
+2024-07-20 06:20:24,475 - log - INFO - Database session created
+2024-07-20 06:20:24,476 - log - INFO - Fetching list of movies with skip: 0 and limit: 10
+2024-07-20 06:20:24,531 - log - INFO - Database session closed
+2024-07-20 06:23:12,530 - log - INFO - Database session created
+2024-07-20 06:23:12,531 - log - INFO - Fetching rating for movie ID: 2
+2024-07-20 06:23:12,531 - log - INFO - Fetching ratings for movie_id: 2
+2024-07-20 06:23:12,556 - log - ERROR - Error fetching ratings for movie_id: 2
+2024-07-20 06:23:12,556 - log - INFO - Database session closed
+2024-07-20 06:23:21,308 - log - INFO - Database session created
+2024-07-20 06:23:21,309 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:23:21,309 - log - INFO - Fetching ratings for movie_id: 1
+2024-07-20 06:23:21,309 - log - ERROR - Error fetching ratings for movie_id: 1
+2024-07-20 06:23:21,310 - log - INFO - Database session closed
+2024-07-20 06:24:19,488 - log - INFO - Database session created
+2024-07-20 06:24:19,489 - log - INFO - Attempting to login user with username: username
+2024-07-20 06:24:19,505 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/thirdsemester/venv/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-07-20 06:24:19,793 - log - INFO - User authenticated: username
+2024-07-20 06:24:19,800 - log - INFO - Access token created for user: username
+2024-07-20 06:24:19,800 - log - INFO - User logged in successfully with username: username
+2024-07-20 06:24:19,801 - log - INFO - Database session closed
+2024-07-20 06:24:40,427 - log - INFO - Database session created
+2024-07-20 06:24:40,430 - log - INFO - User validated from token: username
+2024-07-20 06:24:40,430 - log - INFO - Creating rating for movie ID: 2 by user ID: 1
+2024-07-20 06:24:40,430 - log - INFO - Creating rating for movie_id: 2 by user_id: 1
+2024-07-20 06:24:40,434 - log - WARNING - Rating already exists for movie_id: 2
+2024-07-20 06:24:40,434 - log - ERROR - Error creating rating for movie_id: 2 by user_id: 1
+2024-07-20 06:24:40,435 - log - INFO - Database session closed
+2024-07-20 06:27:26,830 - log - INFO - Database session created
+2024-07-20 06:27:26,902 - log - INFO - User validated from token: username
+2024-07-20 06:27:26,903 - log - INFO - Creating rating for movie ID: 2 by user ID: 1
+2024-07-20 06:27:26,903 - log - INFO - Creating rating for movie_id: 2 by user_id: 1
+2024-07-20 06:27:26,907 - log - WARNING - Rating already exists for movie_id: 2
+2024-07-20 06:27:26,908 - log - INFO - Database session closed
+2024-07-20 06:27:38,340 - log - INFO - Database session created
+2024-07-20 06:27:38,341 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:27:38,341 - log - INFO - Fetching ratings for movie_id: 1
+2024-07-20 06:27:38,342 - log - INFO - Database session closed
+2024-07-20 06:28:42,751 - log - INFO - Database session created
+2024-07-20 06:28:42,752 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:28:42,753 - log - INFO - Fetching ratings for movie_id: 1
+2024-07-20 06:28:42,774 - log - INFO - Database session closed
+2024-07-20 06:29:42,824 - log - INFO - Database session created
+2024-07-20 06:29:42,825 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:29:42,825 - log - INFO - Fetching ratings for movie_id: 1
+2024-07-20 06:29:42,847 - log - INFO - Database session closed
+2024-07-20 06:30:43,517 - log - INFO - Database session created
+2024-07-20 06:30:43,518 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:30:43,551 - log - INFO - Database session closed
+2024-07-20 06:32:03,588 - log - INFO - Database session created
+2024-07-20 06:32:03,588 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:32:03,617 - log - INFO - Database session closed
+2024-07-20 06:32:04,809 - log - INFO - Database session created
+2024-07-20 06:32:04,809 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:32:04,818 - log - INFO - Database session closed
+2024-07-20 06:33:46,169 - log - INFO - Database session created
+2024-07-20 06:33:46,170 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:33:46,199 - log - INFO - Rating found for movie_id: 1
+2024-07-20 06:33:46,200 - log - INFO - Database session closed
+2024-07-20 06:33:57,672 - log - INFO - Database session created
+2024-07-20 06:33:57,673 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:33:57,674 - log - INFO - Rating found for movie_id: 1
+2024-07-20 06:33:57,675 - log - INFO - Database session closed
+2024-07-20 06:41:09,673 - log - INFO - Database session created
+2024-07-20 06:41:09,675 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 06:41:09,698 - log - INFO - Rating found for movie_id: 1
+2024-07-20 06:41:09,700 - log - INFO - Database session closed
+2024-07-20 06:42:04,891 - log - INFO - Database session created
+2024-07-20 06:42:04,892 - log - INFO - Fetching rating for movie ID: 2
+2024-07-20 06:42:04,895 - log - INFO - Rating found for movie_id: 2
+2024-07-20 06:42:04,897 - log - INFO - Database session closed
+2024-07-20 06:45:25,107 - log - INFO - Database session created
+2024-07-20 06:45:25,108 - log - INFO - Fetching list of movies with skip: 0 and limit: 10
+2024-07-20 06:45:25,151 - log - INFO - Database session closed
+2024-07-20 23:19:54,761 - log - INFO - Database session created
+2024-07-20 23:19:54,763 - log - INFO - Fetching list of movies with skip: 0 and limit: 10
+2024-07-20 23:19:54,851 - log - INFO - Database session closed
+2024-07-20 23:20:36,439 - log - INFO - Database session created
+2024-07-20 23:20:36,439 - log - INFO - Fetching list of movies with skip: 0 and limit: 10
+2024-07-20 23:20:36,481 - log - INFO - Database session closed
+2024-07-20 23:22:42,487 - log - INFO - Database session created
+2024-07-20 23:22:42,488 - log - INFO - Fetching list of movies with skip: 0 and limit: 10
+2024-07-20 23:22:42,532 - log - INFO - Database session closed
+2024-07-20 23:22:54,676 - log - INFO - Database session created
+2024-07-20 23:22:54,677 - log - INFO - Fetching list of movies with skip: 0 and limit: 10
+2024-07-20 23:22:54,721 - log - INFO - Database session closed
+2024-07-20 23:23:20,383 - log - INFO - Database session created
+2024-07-20 23:23:20,383 - log - INFO - Fetching list of movies with skip: 0 and limit: 10
+2024-07-20 23:23:20,421 - log - INFO - Database session closed
+2024-07-20 23:26:44,787 - log - INFO - Database session created
+2024-07-20 23:26:44,788 - log - INFO - Fetching movie with ID: 2
+2024-07-20 23:26:44,789 - log - INFO - Database session closed
+2024-07-20 23:28:56,655 - log - INFO - Database session created
+2024-07-20 23:28:56,656 - log - INFO - Fetching movie with ID: 2
+2024-07-20 23:28:56,657 - log - INFO - Database session closed
+2024-07-20 23:29:42,489 - log - INFO - Database session created
+2024-07-20 23:29:42,490 - log - INFO - Fetching rating for movie ID: 1
+2024-07-20 23:29:42,520 - log - INFO - Rating found for movie_id: 1
+2024-07-20 23:29:42,521 - log - INFO - Database session closed
+2024-07-20 23:30:27,040 - log - INFO - Database session created
+2024-07-20 23:30:27,040 - log - INFO - Attempting to login user with username: username
+2024-07-20 23:30:27,053 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/mac/Desktop/thirdsemester/venv/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-07-20 23:30:27,345 - log - INFO - User authenticated: username
+2024-07-20 23:30:27,353 - log - INFO - Access token created for user: username
+2024-07-20 23:30:27,353 - log - INFO - User logged in successfully with username: username
+2024-07-20 23:30:27,353 - log - INFO - Database session closed
+2024-07-20 23:30:46,250 - log - INFO - Database session created
+2024-07-20 23:30:46,265 - log - INFO - User validated from token: username
+2024-07-20 23:30:46,266 - log - INFO - Creating rating for movie ID: 1 by user ID: 1
+2024-07-20 23:30:46,269 - log - WARNING - Rating already exists for movie_id: 1 by user_id: 1
+2024-07-20 23:30:46,271 - log - INFO - Database session closed
+2024-07-20 23:31:04,314 - log - INFO - Database session created
+2024-07-20 23:31:04,316 - log - INFO - User validated from token: username
+2024-07-20 23:31:04,316 - log - INFO - Creating rating for movie ID: 3 by user ID: 1
+2024-07-20 23:31:04,332 - log - INFO - Database session closed
+2024-07-20 23:35:34,520 - log - INFO - Database session created
+2024-07-20 23:35:34,572 - log - INFO - User validated from token: username
+2024-07-20 23:35:34,575 - log - WARNING - Movie not found: id=3
+2024-07-20 23:35:34,576 - log - INFO - Database session closed
+2024-07-20 23:36:00,931 - log - INFO - Database session created
+2024-07-20 23:36:00,974 - log - INFO - User validated from token: username
+2024-07-20 23:36:00,978 - log - WARNING - Movie not found: id=3
+2024-07-20 23:36:00,978 - log - INFO - Database session closed
+2024-07-20 23:36:12,656 - log - INFO - Database session created
+2024-07-20 23:36:12,659 - log - INFO - User validated from token: username
+2024-07-20 23:36:12,661 - log - INFO - Fetched movie: id=5
+2024-07-20 23:36:12,661 - log - INFO - Creating rating for movie ID: 5 by user ID: 1
+2024-07-20 23:36:12,697 - log - INFO - Rating created for movie_id: 5 by user_id: 1
+2024-07-20 23:36:12,697 - log - INFO - Rating created successfully for movie ID: 5
+2024-07-20 23:36:12,698 - log - INFO - Database session closed
