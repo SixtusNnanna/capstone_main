@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta
 
 from fastapi import Depends, HTTPException, status
@@ -5,11 +6,14 @@ from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 from jose import jwt, JWTError
 from passlib.context import CryptContext
+from dotenv import load_dotenv
 
 from capstone_main.schemas import User as UserSchema, UserCreate
 from capstone_main.models import User as UserModel
 from capstone_main.database import get_db
 from capstone_main.log import get_logger
+
+load_dotenv()
 
 logger = get_logger("auth")
 
@@ -18,9 +22,9 @@ pwd_context = CryptContext(schemes=["bcrypt"])
 oath2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 
-ALGORITHM = "HS256"
+ALGORITHM = os.getenv("ALGORITHM")
 ACCESS_TOKEN_EXPIRE_MINUTES = 15
-SECRET_KEY = "my_secret_key"
+SECRET_KEY =  os.getenv("SECRET_KEY")
 
 
 def get_user_by_username(username:str, db:Session):
