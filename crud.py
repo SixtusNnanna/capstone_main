@@ -81,8 +81,12 @@ def edit_movie(db: Session, movie_id:int, movie_paylad:MovieUpate, user_id:int|N
     return movie
 
 
-def delete_movie(db:Session, movie_id:int, user_id:int|None=None):
-    movie =  get_movies_by_id_and_user_id(db, movie_id, user_id)
+def delete_movie(db: Session, movie_id: int, user_id: int | None = None):
+    movie = get_movies_by_id_and_user_id(db, movie_id, user_id)
+    if movie is None:
+        return None
+    db.query(RatingModel).filter(RatingModel.movie_id == movie_id).delete(synchronize_session=False)
     db.delete(movie)
     db.commit()
-    return {"detail": "Movie deleted"}
+
+ 

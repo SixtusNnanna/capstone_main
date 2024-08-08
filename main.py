@@ -79,8 +79,8 @@ def login(form_data: OAuth2PasswordRequestForm = Depends(), db:Session=Depends(g
    return {"access_token": access_token, "token_type": "bearer", "username": db_user.username}
     
     
-@app.get("/movies/", tags=["MOVIE"], response_model=List[MovieSchema])
-def get__movies(db:Session=Depends(get_db), skip:int=0, limit:int=10):
+@app.get("/Movies/", tags=["MOVIE"], response_model=List[MovieSchema])
+def get_all_movies(db:Session=Depends(get_db), skip:int=0, limit:int=10):
     logger.info("Movies retrieved")
     return get_movies(db=db, skip=skip, limit=limit)
 
@@ -92,9 +92,6 @@ def get_movie_by_id(movie_id: int, db: Session=Depends(get_db)):
     return id_movie
     
     
-     
-
-
 @app.post('/movies/create', status_code=status.HTTP_201_CREATED, tags=["MOVIE"])
 def create_movie (moviePayload:MovieCreate, db: Session=Depends(get_db), user : UserSchema=Depends(get_current_user)):
     new_movies =  create_movies(db, moviePayload, user.id)
@@ -128,7 +125,6 @@ def delete__movie (movie_id:int, db: Session=Depends(get_db), user : UserSchema=
     deleted_movie = delete_movie(db, movie_id, user.id)
     return{
         "message": "Movie deleted successfully",
-        "data": deleted_movie
     }
 
 
@@ -163,6 +159,17 @@ def create_nested_comment(comment_id: int, reply: ReplyCreate, db: Session = Dep
         "data": new_reply
     }
 
+
+@app.post("/movie/{movie_id}/create_rating", tags=["RATING"])
+def create_movie_rating(movie_id: int, rating: RatingCreate, db: Session = Depends(get_db), user: UserSchema = Depends(get_current_user)):
+    rate = create_rating(db, rating, movie_id, user.id)
+    logger.info("User rated movie %s successfully", movie_id)
+    return {
+        "message": "Rating created successfully",
+        "data": rate
+    }
+
+
 @app.get("/movie/rating/{movie_id}", tags=["RATING"], status_code=status.HTTP_200_OK)
 def get_movie_rating( movie_id:int,  db:Session=Depends(get_db)):
    average_ratting = get_ratings(db, movie_id)
@@ -175,14 +182,7 @@ def get_movie_rating( movie_id:int,  db:Session=Depends(get_db)):
 
 
 
-@app.post("/movie/{movie_id}/create_rating", tags=["RATING"])
-def create_movie_rating(movie_id: int, rating: RatingCreate, db: Session = Depends(get_db), user: UserSchema = Depends(get_current_user)):
-    rate = create_rating(db, rating, movie_id, user.id)
-    logger.info("User rated movie %s successfully", movie_id)
-    return {
-        "message": "Rating created successfully",
-        "data": rate
-    }
+
 
 
 

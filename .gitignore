@@ -2,3 +2,7 @@
 .capstone-env
 env
 alembic
+alembic.ini
+app.log
+py_log.log
+pytest.ini

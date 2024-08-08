@@ -96,7 +96,7 @@ def test_login(test_client: TestClient, setup_database: None, username: Literal[
 #MOVIES TESTS
 
 def test_get_movies(test_client: TestClient, setup_database: None):
-    response = test_client.get("/movies/")
+    response = test_client.get("/Movies/")
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, list)
