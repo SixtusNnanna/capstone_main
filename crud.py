@@ -68,8 +68,8 @@ def create_movies(db: Session, movie_paylaod:MovieCreate, user_id:int|None=None)
 def edit_movie(db: Session, movie_id:int, movie_paylad:MovieUpate, user_id:int|None=None):
     movie = get_movies_by_id_and_user_id( db, movie_id, user_id)
     if not movie:
-        logger.warning("Movie is not found")
-        raise HTTPException(status_code=404, detail="Movie not found")
+        logger.warning("Movie not found or User is not allow to edit this movie")
+        raise HTTPException(status_code=404, detail="Movie not found or User cannot fetch this movie")
     movie_payload_to_dict = movie_paylad.model_dump(exclude_unset= True)
 
     for k, v in movie_payload_to_dict.items():
@@ -84,6 +84,7 @@ def edit_movie(db: Session, movie_id:int, movie_paylad:MovieUpate, user_id:int|N
 def delete_movie(db: Session, movie_id: int, user_id: int | None = None):
     movie = get_movies_by_id_and_user_id(db, movie_id, user_id)
     if movie is None:
+        logger.warning("Movie not found or User cannot fetch this movie")
         return None
     db.query(RatingModel).filter(RatingModel.movie_id == movie_id).delete(synchronize_session=False)
     db.delete(movie)

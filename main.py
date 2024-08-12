@@ -107,7 +107,10 @@ def update_movie (movie_id:int, moviePayload:MovieUpate, db: Session=Depends(get
     db_movie = get_movies_by_id_and_user_id(db, movie_id, user.id)
     if db_movie is None:
         logger.warning("Movie is not found")
-        raise not_found
+        raise HTTPException(
+            status_code=404,
+            detail="Movie not found or User is not allowed to fetch this movie"
+        )
     edited = edit_movie(db, movie_id, moviePayload, user.id)
     logger.info("Movie is Updated successfully")
     return {
@@ -119,8 +122,11 @@ def update_movie (movie_id:int, moviePayload:MovieUpate, db: Session=Depends(get
 def delete__movie (movie_id:int, db: Session=Depends(get_db), user : UserSchema=Depends(get_current_user)):
     db_movie = get_movies_by_id_and_user_id(db, movie_id, user.id)
     if db_movie is None:
-        logger.warning("Movie is not found")
-        raise not_found
+        logger.warning("Movie is not found or user  access denied")
+        raise HTTPException(
+            status_code=404,
+            detail="Movie not found or User is not allowed to fetch this movie"
+        )
     logger.info("Movie  deleted successfully")
     deleted_movie = delete_movie(db, movie_id, user.id)
     return{
