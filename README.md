@@ -8,7 +8,7 @@ This API is my third/last term project in altschool.
 
 1. [Installation](#installation)
 2. [API Endpoints](#api-endpoints)
-3. [Configuration](#configuration)
+3. [Testing](#configuration)
 
 ## Installation
 
@@ -121,4 +121,19 @@ SECRET_KEY = Secret Key for creating access token
 
 Create a `.env` file in the root directory and add your environment variables:
 
+## Testing
 
+
+### Steps
+
+1. **CD into the root directory**
+    ```
+    cd capstone_main
+    ```
+
+
+1. **Run pytest on your terminal**
+    ```
+    pytest
+    
+    ```

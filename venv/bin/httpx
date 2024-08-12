@@ -1,4 +1,4 @@
-#!/Users/mac/Desktop/thirdsemester/venv/bin/python3.11
+#!/Users/mac/Desktop/capstone_main/venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
