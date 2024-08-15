@@ -8,9 +8,9 @@ from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session, sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.pool import StaticPool
-from capstone_main.main import app
-from capstone_main.database import Base, get_db
-from capstone_main.schemas import MovieCreate, CommentCreate, ReplyCreate, RatingCreate
+from app.main import app
+from app.database import Base, get_db
+from app.schemas import MovieCreate, CommentCreate, ReplyCreate, RatingCreate
 
 
 

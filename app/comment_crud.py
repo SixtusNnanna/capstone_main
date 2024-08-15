@@ -2,10 +2,10 @@ from fastapi import Depends, HTTPException, status
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
 
-from capstone_main.models import Comment as CommentModel
-from capstone_main.schemas import Comment as CommentSchema, CommentCreate, User as UserSchema
-from capstone_main.crud import get_movies_by_id
-from capstone_main.log import get_logger
+from app.models import Comment as CommentModel
+from app.schemas import Comment as CommentSchema, CommentCreate, User as UserSchema
+from app.crud import get_movies_by_id
+from app.log import get_logger
 
 
 

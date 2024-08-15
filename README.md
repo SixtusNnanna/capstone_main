@@ -39,7 +39,7 @@ This API is my third/last term project in altschool.
 3. **Run the application: Go a step back from the root directory and run:**
 
     ```
-   uvicorn capstone_main:main.app --reload
+   uvicorn app:main.app --reload
     ```
 
 4. **The application will be available at:**

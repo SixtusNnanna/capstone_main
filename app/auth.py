@@ -8,10 +8,10 @@ from jose import jwt, JWTError
 from passlib.context import CryptContext
 from dotenv import load_dotenv
 
-from capstone_main.schemas import User as UserSchema, UserCreate
-from capstone_main.models import User as UserModel
-from capstone_main.database import get_db
-from capstone_main.log import get_logger
+from app.schemas import User as UserSchema, UserCreate
+from app.models import User as UserModel
+from app.database import get_db
+from app.log import get_logger
 
 load_dotenv()
 

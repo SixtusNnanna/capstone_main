@@ -2,11 +2,11 @@ from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 
 
-from capstone_main.crud import get_movies_by_id
-from capstone_main.models import Rating as RatingModel
-from capstone_main.schemas import Rating as RatingSchema, RatingCreate
-from capstone_main.utils import average_rating
-from capstone_main.log  import get_logger
+from app.crud import get_movies_by_id
+from app.models import Rating as RatingModel
+from app.schemas import Rating as RatingSchema, RatingCreate
+from app.utils import average_rating
+from app.log  import get_logger
 
 logger = get_logger("rating_crud")
 

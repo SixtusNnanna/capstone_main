@@ -3,7 +3,7 @@ from datetime import datetime
 from sqlalchemy import Column, String, Integer, DateTime,Text, ForeignKey, Float
 from sqlalchemy.orm import relationship
 
-from capstone_main.database import Base
+from app.database import Base
 
 
 

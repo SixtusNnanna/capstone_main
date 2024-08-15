@@ -2,10 +2,10 @@ from fastapi import Depends, HTTPException, status
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
 
-from capstone_main.schemas import ReplyCreate
-from capstone_main.models import Reply as ReplyModel
-from capstone_main.comment_crud import get_comment_by_id
-from capstone_main.log import get_logger
+from app.schemas import ReplyCreate
+from app.models import Reply as ReplyModel
+from app.comment_crud import get_comment_by_id
+from app.log import get_logger
 
 logger = get_logger("reply_crud")
 
