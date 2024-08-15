@@ -156,7 +156,10 @@ def create_nested_comment(comment_id: int, reply: ReplyCreate, db: Session = Dep
     db_comment = get_comment_by_id(db, comment_id)
     if db_comment is None:
         logger.warning("Comment with id of  %s is  not found", comment_id)
-        raise not_found
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Comment not found"
+        )
     logger.info("User added a reply to a comment with id %s", comment_id)
     new_reply = create_reply(db=db, reply_payload=reply, comment_id=comment_id, movie_id=db_comment.movie_id, user_id=user.id)
 
